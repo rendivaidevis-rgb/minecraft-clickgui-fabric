@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "modclient",
+  "version": "${version}",
+  "name": "MyClient ClickGUI",
+  "description": "Modern PvP-style ClickGUI for Minecraft 1.21.1",
+  "authors": [
+    "rendivaidevis"
+  ],
+  "contact": {
+    "homepage": "https://github.com/rendivaidevis-rgb/minecraft-clickgui-fabric",
+    "sources": "https://github.com/rendivaidevis-rgb/minecraft-clickgui-fabric"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "com.myclient.client.MyClientClient"
+    ],
+    "client": [
+      "com.myclient.client.MyClientClient"
+    ]
+  },
+  "mixins": [
+    "modclient.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.5",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

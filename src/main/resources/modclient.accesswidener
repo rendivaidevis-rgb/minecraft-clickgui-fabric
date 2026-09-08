@@ -1,0 +1,5 @@
+accessWidener v2 named
+
+accessible field net/minecraft/client/gui/screen/Screen eventListeners Ljava/util/List;
+accessible method net/minecraft/client/gui/screen/Screen render (Lnet/minecraft/client/gui/DrawContext;II)V
+accessible field net/minecraft/client/MinecraftClient currentScreen Lnet/minecraft/client/gui/screen/Screen;
