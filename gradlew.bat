@@ -25,7 +25,7 @@
 if "%OS%"=="Windows_NT" setlocal
 
 set DIRNAME=%~dp0
-if "%DIRNAME%"==\" set DIRNAME=.
+if "%DIRNAME%"=="" set DIRNAME=.
 set APP_BASE_NAME=%~n0
 set APP_HOME=%DIRNAME%
 
@@ -69,7 +69,6 @@ goto fail
 
 set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
 
-
 @rem Execute Gradle
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% "-Dorg.gradle.appname=%APP_BASE_NAME%" -classpath "%CLASSPATH%" org.gradle.wrapper.GradleWrapperMain %*
 
@@ -83,7 +82,7 @@ goto end
 :fail
 rem Set variable GRADLE_EXIT_CONSOLE if you need the .bat script to return exit code 150 for a
 rem failed Gradle build. cd /d "%~dp0" to restore starting folder.
-if  not "" == "%GRADLE_EXIT_CONSOLE%" exit %ERROR_CODE%
+if  not ""=="%GRADLE_EXIT_CONSOLE%" exit %ERROR_CODE%
 
 exit /b %ERROR_CODE%
 
